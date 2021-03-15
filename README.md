@@ -14,7 +14,8 @@ The proposed solution for the problem statement mentioned above is shown in the 
 
 <add image of architecture here>
   
-#### Here are the list of components that were created for the above architecture using Cloudformation and why the below services were leveraged:
+#### List of Components 
+
 1. **VPC - For Creation of secluded resources**
 2. **Public Subnets - 2 (Availability Zone A/B)**
 3. **Private Subnets - 2 (Availability Zone A/B)**
