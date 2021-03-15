@@ -10,9 +10,19 @@ Create a simple web application for serving images that presents a single URL th
 3. <>
 
 ### Proposed Solution
-The proposed solution for the problem statement mentioned above comprises of the following components. All AWS components have been created using a Cloudformation YAML file.
-1. VPC 
-2. Subnets - 2 Public and 2 Private
-3. EC2 instanes - 1 in each Private Subnet
-4. 
+The proposed solution for the problem statement mentioned above is shown in the architecture below. 
+<add image of architecture here>
+Here are the list of components that were created for the above architecture using Cloudformation.
+1. VPC - For Creation of secluded resources
+2. Public Subnets - 2 (Availability Zone A/B)
+3. Private Subnets - 2 (Availability Zone A/B)
+4. Launch Configuration - For Creation of EC2 instances (in Private Subnets)
+5. AutoScaling - For scaling up/down of EC2 Instances
+6. Application Load Balancer - For directing Traffic to one of the EC2 instances
+7. Target Group - For Application Load Balancer
+8. Internet Gateway - For patching/software updates required on EC2 instances
+9. NAT Gateway - For enabling EC2 instances to access the Internet
+10. IAM Role & IAM Instance Profile - For access to images on S3
+
+
 
