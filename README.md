@@ -40,6 +40,7 @@ Below,is the Low Level Design of the Proposed Solution.
 9. *Internet Gateway - For patching/software updates required on EC2 instances*
 10. *NAT Gateway - For enabling EC2 instances to access the Internet*
 11. *IAM Role & IAM Instance Profile - For access to images on S3*
+12. *Cross AZ Deployment for High Availabilty*
 
 #### Estimate of Cloud Costs:
 
@@ -82,6 +83,8 @@ Since Security in an Architecture is of Paramount importance, the following feat
 6. Images Stored on S3 can only be accessed via IAM Role
 7. Bucket created is Private only
 8. No Bastion Host provided which can SSH to EC2 instances
+9. EC2 Instances OS/Kernel managed and secured by AWS (by using AMI)
+10. SSL/TLS can be configured
 
 
 #### Application Provision & Automation
@@ -99,7 +102,9 @@ As most of the Cloud Providers viz GCP & Azure have similar or almost same compo
 
 ![GCP Solution](/images/GCP.PNG)
 
-#### Enhancements
+#### Proposed Enhancements /Features 
+
+
 
 
 
