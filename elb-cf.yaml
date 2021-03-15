@@ -4,7 +4,7 @@ Description: Creates a VPC and an ALB with EC2 AutoScaling and Target Group
 Parameters:
 
     SSHKeyName:
-        Description: 'Name of the ec2 key you need one to use this template'
+        Description: 'SSH Key'
         Type: 'AWS::EC2::KeyPair::KeyName'
         Default: 'choose-key'
 
