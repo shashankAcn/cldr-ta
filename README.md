@@ -63,16 +63,28 @@ In terms of Performance, the architecture handles it in 2 ways : Performance of 
 
 #### Security Considerations
 
-Since Security in an Architecture is of Paramount importance, the following features are implemented in the solution:
+Since Security in an Architecture is of Paramount importance, the following features are implemented in the solution. All the security features make sure that unintended access to the AWS resources in not allowed. 
 
 1. EC2 instances are placed in Private Subnets with no Public IPs
-2. The Security Groups for EC2 instances only allow traffic from the Application Load Balancer's Security Group on Port 80
-3. The Application Load Balancer can only be accessed on Port 80
-4. No ssh allowed on EC2 instances
-5. Internet Traffic allowed on EC2 instances only via NAT Gateway
-6. Images Stored on S3 can only be accessed via IAM Role
-7. Bucket created is Private only
-8. No Bastion Host provided which can SSH to EC2 instances
+2. No Traffic enters/leaves the VPC
+3. The Security Groups for EC2 instances only allow traffic from the Application Load Balancer's Security Group on Port 80
+4. The Application Load Balancer can only be accessed on Port 80
+5. No ssh allowed on EC2 instances
+6. Internet Traffic allowed on EC2 instances only via NAT Gateway
+7. Images Stored on S3 can only be accessed via IAM Role
+8. Bucket created is Private only
+9. No Bastion Host provided which can SSH to EC2 instances
+
+
+#### Application Provision & Automation
+
+Since, all the resources created for the Solution are automated and created via Cloudformation, its very easy for the entire AWS stack to be recreated and provisioned (say in Region Failure). If we have to share the application for someone else to build and run, all we need to provide is the Cloudforamtion YAML. Since, there are no dependencies for a specific AWS Account/person, the YAML will run on any AWS account in chosen Region.
+
+
+#### Application Portability
+
+
+
 
 
 
