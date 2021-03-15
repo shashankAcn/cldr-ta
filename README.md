@@ -54,7 +54,11 @@ For Storage and Data availability for the Application, the solution uses AWS S3 
 
 #### Performance
 
+In terms of Performance, the architecture handles it in 2 ways : Performance of Storage & Performance of the Application to display images. Since, we have already mentioned about Performance and Scalability of S3, let's talk about the latter. The Performance is handled in 2 ways - Using Autoscaling (in case an EC2 instance goes down) & in terms of Health Checks performed by the Application Load Balancer for EC2 instances. In either cases, the minimum number of EC2 instances configured are 2 (to keep the load balanced). Below, snippets from the Cloudforamation YAML highlight the two scenarios :
 
+![AutoScaling](/images/autoscaling.PNG)
+
+![Health Checks](/images/healthcheck.PNG)
 
 
 
