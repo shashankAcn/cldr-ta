@@ -16,17 +16,17 @@ The proposed solution for the problem statement mentioned above is shown in the 
   
 #### List of Components Leveraged and Why :
 
-1. **VPC - For Creation of secluded resources**
-2. **Public Subnets - 2 (Availability Zone A/B)**
-3. **Private Subnets - 2 (Availability Zone A/B)**
-4. **Launch Configuration - For Creation of EC2 instances (in Private Subnets)**
-5. **AutoScaling - For scaling up/down of EC2 Instances**
-6. **Security Groups for EC2 instances and Application Load Balancer**
-7. **Application Load Balancer - For directing Traffic to one of the EC2 instances**
-8. **Target Group - For Application Load Balancer**
-9. **Internet Gateway - For patching/software updates required on EC2 instances**
-10. **NAT Gateway - For enabling EC2 instances to access the Internet**
-11. **IAM Role & IAM Instance Profile - For access to images on S3**
+1. *VPC - For Creation of secluded resources*
+2. *Public Subnets - 2 (Availability Zone A/B)*
+3. *Private Subnets - 2 (Availability Zone A/B)*
+4. *Launch Configuration - For Creation of EC2 instances (in Private Subnets)*
+5. *AutoScaling - For scaling up/down of EC2 Instances*
+6. *Security Groups for EC2 instances and Application Load Balancer*
+7. *Application Load Balancer - For directing Traffic to one of the EC2 instances*
+8. *Target Group - For Application Load Balancer*
+9. *Internet Gateway - For patching/software updates required on EC2 instances*
+10. *NAT Gateway - For enabling EC2 instances to access the Internet*
+11. *IAM Role & IAM Instance Profile - For access to images on S3*
 
 #### Estimate of Cloud Costs:
 
