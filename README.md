@@ -9,20 +9,20 @@ Create a simple web application for serving images that presents a single URL th
 ### Assumptions
 
 1. Entire solution is hosted and created on AWS.
-2. <>
+2. Cloudformation is the choice for spinning up all the resources in AWS
 3. <>
 
 ### Proposed Solution
 
-The proposed solution for the problem statement mentioned above is shown in the architecture below. 
+The proposed solution for the problem statement mentioned above is shown in the architecture below. <Add more text here>
 
-<add image of architecture here>
+![Solution Architecture](/images/Architecture.PNG)
   
 #### List of Components Leveraged and Why :
 
 1. *VPC - For Creation of secluded resources*
 2. *Public Subnets - 2 (Availability Zone A/B)*
-3. *Private Subnets - 2 (Availability Zone A/B)*
+3. *Private Subnets - 2 (Availability Zone A/B) for creating EC2 instances*
 4. *Launch Configuration - For Creation of EC2 instances (in Private Subnets)*
 5. *AutoScaling - For scaling up/down of EC2 Instances*
 6. *Security Groups for EC2 instances and Application Load Balancer*
