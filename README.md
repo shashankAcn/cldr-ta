@@ -14,7 +14,16 @@ Create a simple web application for serving images that presents a single URL th
 
 ### Proposed Solution
 
-The proposed solution for the problem statement mentioned above is shown in the architecture below. <Add more text here>
+The proposed solution for the problem statement mentioned above is shown in the architecture below. The flow for the Proposed Solution is as below:
+
+![High Level Solution](/images/highlevel.PNG)
+
+* User Submits requests to Application Load Balancer via Browser
+* Application Load Balancer directs the request to one of the EC2 instances
+* Application Code inside EC2 instances GET images from S3, stitch it in the code and sends back response to the ALB
+* ALB displays the results back to the user
+
+Below,is the Low Level Design of the Proposed Solution.
 
 ![Solution Architecture](/images/Architecture.PNG)
   
@@ -66,14 +75,13 @@ In terms of Performance, the architecture handles it in 2 ways : Performance of 
 Since Security in an Architecture is of Paramount importance, the following features are implemented in the solution. All the security features make sure that unintended access to the AWS resources in not allowed. 
 
 1. EC2 instances are placed in Private Subnets with no Public IPs
-2. No Traffic enters/leaves the VPC
-3. The Security Groups for EC2 instances only allow traffic from the Application Load Balancer's Security Group on Port 80
-4. The Application Load Balancer can only be accessed on Port 80
-5. No ssh allowed on EC2 instances
-6. Internet Traffic allowed on EC2 instances only via NAT Gateway
-7. Images Stored on S3 can only be accessed via IAM Role
-8. Bucket created is Private only
-9. No Bastion Host provided which can SSH to EC2 instances
+2. The Security Groups for EC2 instances only allow traffic from the Application Load Balancer's Security Group on Port 80
+3. The Application Load Balancer can only be accessed on Port 80
+4. No ssh allowed on EC2 instances
+5. Internet Traffic allowed on EC2 instances only via NAT Gateway
+6. Images Stored on S3 can only be accessed via IAM Role
+7. Bucket created is Private only
+8. No Bastion Host provided which can SSH to EC2 instances
 
 
 #### Application Provision & Automation
