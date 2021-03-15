@@ -83,7 +83,11 @@ Since, all the resources created for the Solution are automated and created via 
 
 #### Application Portability
 
+The existing Cloudformation is YAML based and can be easily ported to run on another Cloud provider like Google's Deployment Manager or Azure's Resource Manager <Talk about Terraform>
+  
+#### Comparison 
 
+#### Enhancements
 
 
 
