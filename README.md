@@ -34,6 +34,16 @@ The proposed solution for the problem statement mentioned above is shown in the 
 
 #### Estimate of Cloud Costs:
 
+The overall costs associated with the Proposed Architecture are for the the below componenents:
+
+1. EC2 Instances created (total 2)
+2. NAT Gateway 
+3. Data Transfer Charges via NAT Gateway from S3
+
+Using the *AWS Simple Monthly Calculator* the approximate cost calculated is $18.71 (USD). The cost is primarily for EC2 instances and S3. Since, we are using a NAT Gateway, the data transfer charges from S3 will vary. Below, is a screenshot of the costs:
+
+![Solution Architecture](/images/Costs.PNG)
+
 
 
 
