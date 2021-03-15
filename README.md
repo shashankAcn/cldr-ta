@@ -46,11 +46,15 @@ Using the *AWS Simple Monthly Calculator* the approximate cost calculated is $18
 
 #### Scalability
 
-The solution is highly scalable in relation to 2 factors - Storage & Requests. Let's take a look at both these factors:
+The solution is highly scalable in relation to 3 factors - Storage, Data Availability & Requests. Let's take a look at both these factors:
 
-##### Storage
+##### Storage & Data Availability
 
-For Storage of images, the solution uses AWS S3.
+For Storage and Data availability for the Application, the solution uses AWS S3 which is highly scalable, resilient and provides 99.999999999% (11 9's) durability. By using S3, the architecture promises to meet the business requirements at all times. AWS S3 can scale up/down based on requirements and there is no upfront charges / resource procurement cycles.
+
+#### Performance
+
+
 
 
 
