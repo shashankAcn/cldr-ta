@@ -37,12 +37,20 @@ The proposed solution for the problem statement mentioned above is shown in the 
 The overall costs associated with the Proposed Architecture are for the the below componenents:
 
 1. EC2 Instances created (total 2)
-2. NAT Gateway 
-3. Data Transfer Charges via NAT Gateway from S3
+2. NAT Gateway (both Duration & Data sent through NAT Gateway)
 
-Using the *AWS Simple Monthly Calculator* the approximate cost calculated is $18.71 (USD). The cost is primarily for EC2 instances and S3. Since, we are using a NAT Gateway, the data transfer charges from S3 will vary. Below, is a screenshot of the costs:
+Using the *AWS Simple Monthly Calculator* the approximate cost calculated is $18.71 (USD). The cost is primarily for EC2 instances and S3. Since, we are using a NAT Gateway, the duration and Data sent through it will also incur costs (this cannot be captured in the Calculator). Below, is a screenshot of the costs:
 
 ![Solution Architecture](/images/Costs.PNG)
+
+
+#### Scalability
+
+The solution is highly scalable in relation to 2 factors - Storage & Requests. Let's take a look at both these factors:
+
+##### Storage
+
+For Storage of images, the solution uses AWS S3.
 
 
 
