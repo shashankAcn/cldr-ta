@@ -10,7 +10,7 @@ Create a simple web application for serving images that presents a single URL th
 
 1. Entire solution is hosted and created on AWS.
 2. Cloudformation is the choice for spinning up all the resources in AWS
-3. <>
+3. ALl AWS resources are created in the same VPC
 
 ### Proposed Solution
 
@@ -61,7 +61,18 @@ In terms of Performance, the architecture handles it in 2 ways : Performance of 
 ![Health Checks](/images/healthcheck.PNG)
 
 
+#### Security Considerations
 
+Since Security in an Architecture is of Paramount importance, the following features are implemented in the solution:
+
+1. EC2 instances are placed in Private Subnets with no Public IPs
+2. The Security Groups for EC2 instances only allow traffic from the Application Load Balancer's Security Group on Port 80
+3. The Application Load Balancer can only be accessed on Port 80
+4. No ssh allowed on EC2 instances
+5. Internet Traffic allowed on EC2 instances only via NAT Gateway
+6. Images Stored on S3 can only be accessed via IAM Role
+7. Bucket created is Private only
+8. No Bastion Host provided which can SSH to EC2 instances
 
 
 
