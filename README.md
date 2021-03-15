@@ -14,7 +14,7 @@ The proposed solution for the problem statement mentioned above is shown in the 
 
 <add image of architecture here>
   
-#### List of Components 
+#### List of Components Leveraged and Why :
 
 1. **VPC - For Creation of secluded resources**
 2. **Public Subnets - 2 (Availability Zone A/B)**
@@ -27,6 +27,9 @@ The proposed solution for the problem statement mentioned above is shown in the 
 9. **Internet Gateway - For patching/software updates required on EC2 instances**
 10. **NAT Gateway - For enabling EC2 instances to access the Internet**
 11. **IAM Role & IAM Instance Profile - For access to images on S3**
+
+#### Estimate of Cloud Costs:
+
 
 
 
