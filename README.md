@@ -63,7 +63,7 @@ For Storage and Data availability for the Application, the solution uses AWS S3 
 
 #### Performance
 
-In terms of Performance, the architecture handles it in 2 ways : Performance of Storage & Performance of the Application to display images. Since, we have already mentioned about Performance and Scalability of S3, let's talk about the latter. The Performance is handled in 2 ways - Using Autoscaling (in case an EC2 instance goes down) & in terms of Health Checks performed by the Application Load Balancer for EC2 instances. In either cases, the minimum number of EC2 instances configured are 2 (to keep the load balanced). Below, snippets from the Cloudforamation YAML highlight the two scenarios :
+In terms of Performance, the architecture handles it in 2 ways : Performance of Storage & Performance of the Application to display images. Since, we have already mentioned about Performance and Scalability of S3, let's talk about the latter. The Performance is handled in 2 ways - Using Autoscaling (in case an EC2 instance goes down) & in terms of Health Checks performed by the Application Load Balancer for EC2 instances. In either cases, the minimum number of EC2 instances configured are 2 (to keep the load balanced). Below, snippets from the Cloudformation YAML highlight the two scenarios :
 
 ![AutoScaling](/images/autoscaling.PNG)
 
@@ -91,9 +91,13 @@ Since, all the resources created for the Solution are automated and created via 
 
 #### Application Portability
 
-The existing Cloudformation is YAML based and can be easily ported to run on another Cloud provider like Google's Deployment Manager or Azure's Resource Manager <Talk about Terraform>
+The existing Cloudformation is YAML based and can be easily ported to run on another Cloud provider like Google's Deployment Manager or Azure's Resource Manager. The only step required is to convert the CloudFormation YAML into its equivalent Terraform .tf file. There are a few tools available to do this - Hashicorp's Registry & TrackIt. Moreover, this can be done manually too.
   
 #### Comparison 
+
+As most of the Cloud Providers viz GCP & Azure have similar or almost same components, its pretty simple to jot down the like to like components and port the solution. The below architecture is created on GCP. As can be seen from the design, all the AWS components have been replaced with their counterparts in GCP.
+
+![GCP Solution](/images/GCP.PNG)
 
 #### Enhancements
 
