@@ -56,7 +56,7 @@ Using the *AWS Simple Monthly Calculator* the approximate cost calculated is $18
 
 #### Scalability
 
-The solution is highly scalable in relation to 3 factors - Storage, Data Availability & Requests. Let's take a look at both these factors:
+The solution is highly scalable in relation to 3 factors - Storage, Data Availability & Requests. Let's take a look at all these factors:
 
 ##### Storage & Data Availability
 
@@ -103,6 +103,28 @@ As most of the Cloud Providers viz GCP & Azure have similar or almost same compo
 ![GCP Solution](/images/GCP.PNG)
 
 #### Proposed Enhancements /Features 
+
+The Proposed Solution can be scaled to add more features & enhancements while also considering Costs,Security & Performance. The below section highlights the following:
+
+##### Costs Enhancements
+
+* NAT Gateway can be replaced with a **S3 VPC Endpoint** to avoid Data Charges through NAT Gateway via S3
+
+##### Security Enhancements
+
+* AWS Config Manager can be used to store all Secrets and Access Keys
+* AWS WAF along with Shield can be used to prevent DDoS attacks
+* TLS/SSL can be configured to provide Encryption at Rest/Motion
+
+
+##### Performance Enhancements
+
+* Elastic BeanStalk can be used to deploy an Application (say Node.js) which will automatically take care of AutoScaling & underlying Infrastructure
+* Route 53 can be used for DNS for Application Load Balancer
+* ECS/EKS can be deployed to containerize the application in case of heavy traffic. AWS FarGate will thus orchestrate the containers
+* CloudFront can be deployed for CDN if localised content has be delivered with minimal latency
+* Application Load Balancer can be configured to scale up/down in terms of CPU/disk utilization
+
 
 
 
