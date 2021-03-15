@@ -115,6 +115,7 @@ The Proposed Solution can be scaled to add more features & enhancements while al
 * AWS Config Manager can be used to store all Secrets and Access Keys
 * AWS WAF along with Shield can be used to prevent DDoS attacks
 * TLS/SSL can be configured to provide Encryption at Rest/Motion
+* EFS Mount Points can be created to avoid Traffic going out to S3
 
 
 ##### Performance Enhancements
