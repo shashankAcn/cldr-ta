@@ -16,7 +16,7 @@ Create a simple web application for serving images that presents a single URL th
 
 The proposed solution for the problem statement mentioned above is shown in the architecture below. The flow for the Proposed Solution is as below:
 
-![High Level Solution](/images/highlevel.PNG)
+<img src="/images/highlevel.PNG" width="80%">
 
 * User Submits requests to Application Load Balancer via Browser
 * Application Load Balancer directs the request to one of the EC2 instances
