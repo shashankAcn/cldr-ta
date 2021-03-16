@@ -10,7 +10,7 @@ Create a simple web application for serving images that presents a single URL th
 
 1. Entire solution is hosted and created on AWS.
 2. Cloudformation is the choice for spinning up all the resources in AWS
-3. ALl AWS resources are created in the same VPC
+3. All AWS resources are created in the same VPC
 
 ### Proposed Solution
 
