@@ -100,7 +100,7 @@ The existing Cloudformation is YAML based and can be easily ported to run on ano
 
 As most of the Cloud Providers viz GCP & Azure have similar or almost same components, its pretty simple to jot down the like to like components and port the solution. The below architecture is created on GCP. As can be seen from the design, all the AWS components have been replaced with their counterparts in GCP.
 
-![GCP Solution](/images/GCP.PNG)
+<img src="/images/GCP.PNG" width="80%">
 
 #### Proposed Enhancements /Features 
 
@@ -126,6 +126,7 @@ The Proposed Solution can be scaled to add more features & enhancements while al
 * CloudFront can be deployed for CDN if localised content has be delivered with minimal latency
 * Application Load Balancer can be configured to scale up/down in terms of CPU/disk utilization
 * AWS SNS along with SES can be configured to send out notifications. Eg: instance failure, High CPU utilization,AutoScaling etc
+* CloudWatch can be deployed to visualize AWS Health
 
 
 
