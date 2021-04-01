@@ -1,6 +1,6 @@
-# Cloudera Tech Assessment
+# Assessment
 
-This page outlines and explains the architecture and steps performed for the Tech Assessment for Cloudera. The page will also outline all the reasons of choosing the mentioned architecture and further improvements that could be incorporated.
+This page outlines and explains the architecture and steps performed. The page will also outline all the reasons of choosing the mentioned architecture and further improvements that could be incorporated.
 
 ### Problem Statement
 
